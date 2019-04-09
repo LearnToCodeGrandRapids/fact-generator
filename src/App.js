@@ -1,10 +1,15 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import facts from "./Facts";
+import { generateRandomNumberBetween } from "./Utilities";
 
-class App extends Component {
-  render() {
-    return <p>Hello World!</p>;
-  }
+export default function App() {
+  const [fact, setFact] = useState("");
+
+  useEffect(() => {
+    const randomFactIndex = generateRandomNumberBetween(0, facts.length);
+    setFact(facts[randomFactIndex]);
+  }, []);
+
+  return <p className="content">{fact}</p>;
 }
-
-export default App;
