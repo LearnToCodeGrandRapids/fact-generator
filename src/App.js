@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import facts from "./Facts";
-import { generateRandomNumberBetween } from "./Utilities";
+import { random } from "./Utilities";
 
 export default function App() {
   const [fact, setFact] = useState("");
 
   useEffect(() => {
-    const randomFactIndex = generateRandomNumberBetween(0, facts.length);
+    const randomFactIndex = random(0, facts.length);
     setFact(facts[randomFactIndex]);
   }, []);
 
-  return <p className="content">{fact}</p>;
+  return (
+    <>
+      <div className="content">
+        <p>{fact}</p>
+        <button onClick={() => setFact(facts[random(0, facts.length)])}>
+          Show me another fact, please.
+        </button>
+      </div>
+    </>
+  );
 }

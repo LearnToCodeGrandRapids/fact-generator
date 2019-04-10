@@ -8,10 +8,21 @@ body {
   text-align: center;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: monospace;
   font-size: calc(16px + 2vmin);
   background-color: #282c34;
   color: white;
+}
+
+button {
+  width: 75%;
+  height: 48px;
+  border: none;
+  border-radius: 5px;
+  background-color: tomato;
+  color: #222;
+  font-size: 16px;
 }
