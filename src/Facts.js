@@ -5,7 +5,8 @@ const facts = [
   "Patrick is an endurance runner, completing a marathon and several 25k Riverbank runs.",
   "Patrick has a brindle pitbull named Benji, who has one floppy ear.",
   "Patrick's favorite style of beer is German hefeweizen.",
-  "JavaScript was created in 10 days, but it's a lot better now."
+  "JavaScript was created in 10 days, but it's a lot better now.",
+  "Mark is really cool."
 ];
 
 export default facts;
